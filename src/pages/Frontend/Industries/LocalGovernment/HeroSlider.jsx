@@ -10,6 +10,7 @@ const slides = [
   },
   {
     title: "Building Tomorrow's Infrastructure Today",
+
     description:
       "Our engineering expertise drives results across every sector, delivering precision and performance at every stage.",
     image:
@@ -34,11 +35,18 @@ const StatsBar = () => {
   return (
     <div
       style={{
-        width: "100%",
-        backgroundColor: "rgba(20,20,20,0.75)",
+        position: "absolute",
+        bottom: 0,
+        left: 0,
+        right: 0,
         display: "flex",
         alignItems: "stretch",
         height: "115px",
+        backgroundColor: "rgba(10, 15, 30, 0.28)",
+        backdropFilter: "blur(8px)",
+        WebkitBackdropFilter: "blur(8px)",
+        borderTop: "1px solid rgba(255,255,255,0.08)",
+        zIndex: 5,
       }}
     >
       {stats.map((stat, i) => (
@@ -130,10 +138,10 @@ const HeroSlider = () => {
             {slide.description}
           </p>
         </div>
-      </div>
 
-      {/* ── Stats Bar ── */}
-      <StatsBar />
+        {/* ── Stats Bar (transparent, overlapping image) ── */}
+        <StatsBar />
+      </div>
     </div>
   );
 };

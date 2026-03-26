@@ -1,6 +1,6 @@
 import React from 'react'
 import HeroSlider from './HeroSlider';
-import Cargo from './Crago'
+import Crago from './Cargo'
 import Services from './services';
 import AiProduct from './AiPrduct'
 import IndustryPage from "../IndustryPage";
@@ -20,7 +20,7 @@ const index = () => {
            
 
             <HeroSlider />
-            <Cargo />
+            <Crago />
               <Services/>
             <AiProduct />
             

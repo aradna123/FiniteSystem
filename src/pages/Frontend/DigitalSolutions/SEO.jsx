@@ -2,8 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 const slides = [
   { title: "Professional Doors & Windows Installation For 20+ Years", desc: "We provide the best services for your doors & windows. Duis minim ea aliqua deserunt ut minim irure in aute aliqua exercitation commodo eiusmod eu.", bg: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&auto=format&fit=crop" },
-  { title: "Improving Living Spaces with Crafted Doors and Windows", desc: "We provide the best services for your doors & windows. Duis minim ea aliqua deserunt ut minim irure in aute aliqua exercitation commodo eiusmod eu.", bg: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&auto=format&fit=crop" },
-  { title: "Premium Quality, Expert Craftsmanship Every Time", desc: "We provide the best services for your doors & windows. Duis minim ea aliqua deserunt ut minim irure in aute aliqua exercitation commodo eiusmod eu.", bg: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=1600&auto=format&fit=crop" },
+  
 ];
 
 const GREEN = "#2e7d32";
@@ -24,6 +23,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
                 <span style={{ display: "block", width: 32, height: 2.5, background: GREEN }} />
                 <span style={{ display: "block", width: 32, height: 2.5, background: GREEN }} />
               </div>
+              
             </div>
             <span style={{ fontWeight: 900, fontSize: 22, color: "#111", letterSpacing: "0.18em", lineHeight: 1, marginTop: 3 }}>WINDOWS</span>
           </div>

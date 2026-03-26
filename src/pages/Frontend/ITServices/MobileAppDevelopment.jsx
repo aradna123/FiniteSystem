@@ -7,48 +7,85 @@ import Design from '../Random/Design';
 
 
 
-const HeroSection = () => {
+
+
+const IMAGE_URL =
+  "https://demo.artureanec.com/themes/marketum/wp-content/uploads/2022/01/feat_blog_1.jpeg";
+
+ function HeroSection() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setVisible(true), 100);
+  }, []);
+
   return (
-    <div className="relative w-full flex items-stretch overflow-hidden bg-white min-h-[420px]">
-      
-      {/* Left — Image */}
-      <div className="w-1/2 relative">
+    <section className="relative w-full h-screen flex overflow-hidden">
+
+      {/* TOP ACCENT BLOCKS */}
+      <div className="absolute top-0 left-0 w-20 h-10 bg-[#C0392B] z-20" />
+      <div className="absolute top-0 right-0 w-24 h-10 bg-[#8A8A8A] z-20" />
+
+      {/* ── LEFT — Natural image, no color filter ── */}
+      <div
+        className="relative w-[48%] h-full overflow-hidden"
+        style={{
+          opacity: visible ? 1 : 0,
+          transform: visible ? "translateX(0)" : "translateX(-30px)",
+          transition: "opacity 0.9s ease, transform 0.9s ease",
+        }}
+      >
         <img
-          src="https://demo.artureanec.com/themes/marketum/wp-content/uploads/2021/12/slide_4.jpg"
+          src={IMAGE_URL}
           alt="Creative Marketing"
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute top-0 left-0 w-16 h-16 bg-[#e05a2b]" />
       </div>
 
-      {/* Right — Content */}
+      {/* ── RIGHT — White content area ── */}
+      <div
+        className="relative w-[52%] h-full bg-white flex flex-col justify-center px-14 lg:px-20"
+        style={{
+          opacity: visible ? 1 : 0,
+          transform: visible ? "translateX(0)" : "translateX(30px)",
+          transition: "opacity 1s ease 0.2s, transform 1s ease 0.2s",
+        }}
+      >
+        <h1
+          className="text-[72px] font-bold leading-[1.05] text-[#1a1a1a] mb-6"
+          style={{ fontFamily: "Georgia, 'Times New Roman', serif", letterSpacing: "-0.02em" }}
+        >
+          Creative
+          <br />
+          Marketing
+        </h1>
+
+        <p
+          className="text-[#777] text-[15px] leading-relaxed mb-10 max-w-[360px]"
+          style={{ fontFamily: "Georgia, serif" }}
+        >
+          Ballan wrasse climbing gourami amur pike Arctic char, steelhead sprat
+          seal. Walleye poolfish sand goby butterfly ray stream catfish jewfish,
+          Spanish mackerel.
+        </p>
+
+        {/* Button with grey shadow offset */}
+        <div className="relative w-fit">
+          <div className="absolute top-[6px] left-[6px] w-full h-full bg-[#888] rounded-sm" />
+          <button
+            className="relative px-10 py-[14px] bg-[#C0392B] hover:bg-[#a93226] text-white font-semibold rounded-sm text-[15px] tracking-wider transition-colors duration-150"
+            style={{ fontFamily: "Georgia, serif" }}
+          >
+            Discover
+          </button>
+        </div>
+      </div>
+
       
-<div className="w-1/2 flex flex-col justify-center px-12 py-16 bg-[#f5f5f5]">
-  <h1 className="text-black leading-tight font-serif text-[3.8rem] tracking-[-1px] mb-6">
-    Creative <br /> Marketing
-  </h1>
-  <p className="text-gray-600 leading-relaxed max-w-md font-serif text-[0.95rem] mb-10">
-    Ballan wrasse climbing gourami amur pike Arctic char, steelhead sprat seal.
-    Walleye poolfish sand goby butterfly ray stream catfish jewfish, Spanish m
-  </p>
-  <div className="relative w-fit group">
-    <div className="absolute inset-0 translate-x-2 translate-y-2 bg-gray-400 transition-transform duration-200 group-hover:translate-x-0 group-hover:translate-y-0" />
-    <button className="relative px-16 py-4 text-white font-semibold text-base tracking-wide transition-colors duration-200 bg-[#e05a2b] group-hover:bg-[#c94d22]">
-      Discover
-    </button>
-  </div>
-</div>
 
-
-
-
-
-
-
-    </div>
+    </section>
   );
-};
-
+}
 
 
 // ── Services Cards ────────────────────────────────────────────────────────────
@@ -210,7 +247,7 @@ const ServicesCards = () => {
     <div 
       className="w-full py-16" 
       style={{ 
-        backgroundColor: "#0a3d62" // simple solid blue background
+        backgroundColor: "#6f9db2" // simple solid blue background
       }}
     >
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-10">

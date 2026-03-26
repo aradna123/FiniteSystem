@@ -51,8 +51,9 @@ const Navbar = () => {
     {
       type: "dropdown", label: "SaaS Products",
       items: [
-        { label: "ezappoint", to: "/ezappoint" },
-        { label: "Viva Link", to: "/vivalink" },
+        { label: "Ezappointo", to: "/ezappointo" },
+        
+        { label: "VivaLink", to: "/vivalink" },
       ],
     },
     {
@@ -74,7 +75,7 @@ const Navbar = () => {
         { label: "Team Augmentation", to: "/team-augmentation" },
         { label: "Devops & Infrastructure", to: "/devops-infrastructure" },
         { label: "Data & Solutions", to: "/data-solutions" },
-        { label: "Artificial Intelligence", to: "/artificial-intelligence" },
+        { label: "Artifical Intelligence", to: "/artifical-intelligence" },
       ],
     },
     {
