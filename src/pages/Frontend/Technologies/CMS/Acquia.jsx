@@ -1234,6 +1234,18 @@ function HowWeWorkSection() {
       ),
       label: "Our Location",
     },
+{
+      icon: (
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <path d="M6 8h24a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H10l-6 4V10a2 2 0 0 1 2-2z" stroke="#6d28d9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+          <circle cx="13" cy="17" r="1.5" fill="#6d28d9"/>
+          <circle cx="18" cy="17" r="1.5" fill="#6d28d9"/>
+          <circle cx="23" cy="17" r="1.5" fill="#6d28d9"/>
+        </svg>
+      ),
+      label: "Talk With Us",
+    },
+
   ];
 
   return (

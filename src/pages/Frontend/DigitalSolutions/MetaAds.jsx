@@ -2,8 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 const slides = [
   { title: "Professional Doors & Windows Installation For 20+ Years", desc: "We provide the best services for your doors & windows. Duis minim ea aliqua deserunt ut minim irure in aute aliqua exercitation commodo eiusmod eu.", bg: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&auto=format&fit=crop" },
-  { title: "Improving Living Spaces with Crafted Doors and Windows", desc: "We provide the best services for your doors & windows. Duis minim ea aliqua deserunt ut minim irure in aute aliqua exercitation commodo eiusmod eu.", bg: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&auto=format&fit=crop" },
-  { title: "Premium Quality, Expert Craftsmanship Every Time", desc: "We provide the best services for your doors & windows. Duis minim ea aliqua deserunt ut minim irure in aute aliqua exercitation commodo eiusmod eu.", bg: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=1600&auto=format&fit=crop" },
+  
 ];
 
 const GREEN = "#2e7d32";
@@ -12,45 +11,7 @@ const GREEN_MID = "#388e3c";
 const GREEN_LIGHT = "#43a047";
 
 // ── NAVBAR ────────────────────────────────────────────────
-function Navbar({ menuOpen, setMenuOpen }) {
-  return (
-    <div style={{ position: "absolute", top: 0, left: 0, right: 0, display: "flex", justifyContent: "center", zIndex: 50 }}>
-      <nav style={{ width: "calc(100% - 48px)", maxWidth: 1140, background: "#fff", borderRadius: "0 0 6px 6px", boxShadow: "0 4px 32px rgba(0,0,0,0.13)" }}>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "20px 36px" }}>
-          <div style={{ display: "flex", flexDirection: "column", userSelect: "none" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-              <span style={{ fontWeight: 900, fontSize: 22, color: "#111", letterSpacing: "0.18em", lineHeight: 1 }}>DOORS</span>
-              <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
-                <span style={{ display: "block", width: 32, height: 2.5, background: GREEN }} />
-                <span style={{ display: "block", width: 32, height: 2.5, background: GREEN }} />
-              </div>
-            </div>
-            <span style={{ fontWeight: 900, fontSize: 22, color: "#111", letterSpacing: "0.18em", lineHeight: 1, marginTop: 3 }}>WINDOWS</span>
-          </div>
-          <ul style={{ display: "flex", alignItems: "center", listStyle: "none", margin: 0, padding: 0 }}>
-            {["Home", "Services", "Projects", "Blog", "Contact"].map((item, i, arr) => (
-              <li key={item} style={{ display: "flex", alignItems: "center" }}>
-                <a href="#" style={{ padding: "8px 16px", fontWeight: 600, fontSize: 15, color: "#222", textDecoration: "none", transition: "color 0.15s" }}
-                  onMouseEnter={e => e.currentTarget.style.color = GREEN}
-                  onMouseLeave={e => e.currentTarget.style.color = "#222"}>{item}</a>
-                {i < arr.length - 1 && <span style={{ color: "#ccc", fontSize: 16 }}>/</span>}
-              </li>
-            ))}
-          </ul>
-          <div style={{ display: "flex", alignItems: "center", gap: 12, background: GREEN, color: "#fff", padding: "14px 20px", borderRadius: 6 }}>
-            <div style={{ width: 40, height: 40, background: "rgba(255,255,255,0.18)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <svg viewBox="0 0 24 24" fill="white" width={18} height={18}><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.29 21 3 13.71 3 5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.01L6.6 10.8z" /></svg>
-            </div>
-            <div>
-              <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", opacity: 0.8, lineHeight: 1, marginBottom: 4 }}>Call Us</p>
-              <p style={{ fontWeight: 900, fontSize: 20, letterSpacing: "0.04em", lineHeight: 1 }}>1 200 300 9000</p>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </div>
-  );
-}
+
 
 // ── HERO SLIDER ───────────────────────────────────────────
 function HeroSlider() {
@@ -376,12 +337,12 @@ function EndDay() {
 }
 
 // ── ROOT ──────────────────────────────────────────────────
+
 const MetaAds = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div style={{ backgroundColor: "#fff", minHeight: "100vh" }}>
       <div style={{ position: "relative" }}>
-        <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        {/* Navbar removed */}
         <HeroSlider />
       </div>
       <FeatureCards />
